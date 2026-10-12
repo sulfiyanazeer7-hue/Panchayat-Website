@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore Nilamel Grama Panchayat, Kollam, Kerala — local development, geographical resources, public information and contact details.">
+  <title>Nilamel Grama Panchayat | Kerala</title>
+
+  <style>
+    :root {
+      --green: #145c43;
+      --dark-green: #0b3d2e;
+      --light-green: #eaf4ed;
+      --gold: #e6b84c;
+      --cream: #f8f8f2;
+      --text: #26352e;
+      --muted: #65746b;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .top-strip {
+      background: var(--dark-green);
+      color: white;
+      text-align: center;
+      padding: 8px 16px;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+    }
+
+    .header {
+      background: white;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .gov-logo {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .header-text h1 {
+      color: var(--dark-green);
+      font-size: clamp(21px, 3vw, 32px);
+      line-height: 1.25;
+    }
+
+    .header-text p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-top: 5px;
+    }
+
+    .navbar {
+      background: var(--green);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 3px 10px #00000012;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .navbar a {
+      display: block;
+      color: white;
+      padding: 14px 16px;
+      font-size: 14px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .navbar a:hover,
+    .navbar a:focus {
+      background: var(--dark-green);
+      outline-offset: -3px;
+    }
+
+    .hero {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(5, 43, 30, 0.88), rgba(5, 43, 30, 0.43)),
+        url("panchayath.jpeg") center 48% / cover no-repeat;
+      color: white;
+      padding: 70px 8%;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      color: var(--gold);
+      font-weight: bold;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .hero h2 {
+      font-size: clamp(35px, 5vw, 57px);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      max-width: 630px;
+      color: #f2f5ef;
+      margin-bottom: 28px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 23px;
+      border-radius: 5px;
+      background: var(--gold);
+      color: var(--dark-green);
+      font-weight: bold;
+      margin: 4px 8px 4px 0;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #f2ca68;
+    }
+
+    .button-outline {
+      background: transparent;
+      color: white;
+      border: 1px solid white;
+    }
+
+    .button-outline:hover {
+      color: var(--dark-green);
+      background: white;
+    }
+
+    .section {
+      padding: 70px 8%;
+    }
+
+    .section-white {
+      background: white;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 38px;
+    }
+
+    .section-heading span {
+      color: var(--green);
+      font-weight: bold;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 4vw, 37px);
+      color: var(--dark-green);
+      line-height: 1.3;
+      margin: 8px 0 12px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .about-grid {
+      max-width: 1150px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 45px;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 12px;
+      box-shadow: 0 10px 28px #163c291a;
+    }
+
+    .about-text h3 {
+      color: var(--green);
+      font-size: 25px;
+      margin-bottom: 14px;
+    }
+
+    .about-text p {
+      color: #536158;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      max-width: 1150px;
+      margin: 40px auto 0;
+    }
+
+    .fact-card {
+      padding: 23px 18px;
+      text-align: center;
+      background: var(--light-green);
+      border-radius: 9px;
+      border-bottom: 3px solid var(--green);
+    }
+
+    .fact-card h3 {
+      font-size: 17px;
+      color: var(--dark-green);
+      margin-bottom: 7px;
+    }
+
+    .fact-card p {
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    .vision-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      max-width: 1050px;
+      margin: auto;
+    }
+
+    .vision-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      border-left: 4px solid var(--gold);
+      box-shadow: 0 5px 20px #173d2810;
+    }
+
+    .vision-card h3 {
+      font-size: 23px;
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .vision-card p {
+      color: var(--muted);
+    }
+
+    .map-card {
+      max-width: 1000px;
+      margin: auto;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 30px #173d2814;
+    }
+
+    .boundary-image {
+      width: 100%;
+      max-height: 590px;
+      object-fit: contain;
+      background: #f0f2eb;
+      padding: 15px;
+    }
+
+    .map-caption {
+      padding: 25px;
+      text-align: center;
+    }
+
+    .map-caption h3 {
+      color: var(--dark-green);
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .map-caption p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .resource-section {
+      background: var(--dark-green);
+      color: white;
+      text-align: center;
+    }
+
+    .resource-section .section-heading h2 {
+      color: white;
+    }
+
+    .resource-section .section-heading p {
+      color: #d7e5dc;
+    }
+
+    .resource-panel {
+      max-width: 850px;
+      margin: auto;
+      padding: 35px 25px;
+      border: 1px solid #ffffff35;
+      border-radius: 12px;
+      background: #ffffff0b;
+    }
+
+    .resource-panel h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .resource-panel p {
+      color: #d7e5dc;
+      margin-bottom: 22px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .contact-card {
+      padding: 28px 20px;
+      background: var(--light-green);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 14px;
+      display: grid;
+      place-items: center;
+      background: var(--green);
+      color: white;
+      border-radius: 50%;
+      font-size: 21px;
+    }
+
+    .contact-card h3 {
+      color: var(--dark-green);
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #536158;
+      font-size: 14px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card a:hover {
+      color: var(--green);
+      text-decoration: underline;
+    }
+
+    .contact-note {
+      max-width: 850px;
+      margin: 30px auto 0;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    footer {
+      background: #082d22;
+      color: #e5eee8;
+      padding: 28px 7%;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    footer p + p {
+      margin-top: 5px;
+      color: #bdcfc3;
+    }
+
+    @media (max-width: 760px) {
+      .header {
+        padding: 15px 5%;
+        gap: 12px;
+      }
+
+      .gov-logo {
+        width: 62px;
+        height: 62px;
+      }
+
+      .header-text p {
+        font-size: 12px;
+      }
+
+      .nav-inner {
+        padding: 4px 8px;
+        gap: 0;
+      }
+
+      .navbar a {
+        padding: 10px 11px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 400px;
+        padding: 55px 7%;
+        background-position: center;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .section {
+        padding: 52px 6%;
+      }
+
+      .about-grid,
+      .vision-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .about-image {
+        height: 270px;
+      }
+
+      .facts {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .boundary-image {
+        max-height: 430px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-strip">
+    LOCAL SELF GOVERNMENT • KOLLAM DISTRICT • KERALA, INDIA
+  </div>
+
+  <header class="header">
+    <img
+      src="logo.png"
+      alt="Kerala Government logo"
+      class="gov-logo"
+    >
+    <div class="header-text">
+      <h1>Nilamel Grama Panchayat</h1>
+      <p>Chadayamangalam Block, Kollam District, Kerala</p>
+      <p>Local governance • Inclusive development • Public participation</p>
+    </div>
+  </header>
+
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#vision">Vision &amp; Mission</a>
+      <a href="#boundary">Panchayat Map</a>
+      <a href="#resources">Resource Map</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">Welcome to Nilamel</span>
+        <h2>Building a Better Future Through Local Governance</h2>
+        <p>
+          Discover Nilamel Grama Panchayat, a local self-government
+          institution in Kollam district, Kerala, committed to community
+          participation, sustainable development and accessible public
+          services.
+        </p>
+        <a href="#about" class="button">Explore Panchayat</a>
+        <a href="#resources" class="button button-outline">View Resource Map</a>
+      </div>
+    </section>
+
+    <section class="section section-white" id="about">
+      <div class="section-heading">
+        <span>About the Panchayat</span>
+        <h2>Know Nilamel</h2>
+        <p>
+          Understanding the landscape, people and development priorities
+          of Nilamel Grama Panchayat.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <img
+            src="panchayath.jpeg"
+            alt="Nilamel Grama Panchayat office building"
+            class="about-image"
+            loading="lazy"
+          >
+        </div>
+
+        <div class="about-text">
+          <h3>A Community-Oriented Local Government</h3>
+          <p>
+            Nilamel Grama Panchayat is situated in the Chadayamangalam
+            Block of Kollam district in Kerala. The region forms part of
+            Kerala's midland landscape, characterised by a combination of
+            hills, valleys, agricultural land, streams and settlements.
+          </p>
+          <p>
+            The panchayat plays an important role in local administration,
+            rural development, public welfare and the delivery of essential
+            civic services. Its responsibilities include supporting
+            community infrastructure, sanitation, public health,
+            drinking-water facilities and locally planned development
+            programmes.
+          </p>
+          <p>
+            People's participation is an important element of
+            decentralised governance. Through local planning and community
+            involvement, the panchayat can address local needs while
+            promoting environmental protection, social inclusion and
+            sustainable resource management.
+          </p>
+        </div>
+      </div>
+
+      <div class="facts">
+        <div class="fact-card">
+          <h3>Location</h3>
+          <p>Nilamel, Kollam District, Kerala</p>
+        </div>
+        <div class="fact-card">
+          <h3>Local Governance</h3>
+          <p>Grama Panchayat under Kerala's local self-government system</p>
+        </div>
+        <div class="fact-card">
+          <h3>Development Focus</h3>
+          <p>Public welfare, local infrastructure and sustainability</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="vision">
+      <div class="section-heading">
+        <span>Our Direction</span>
+        <h2>Vision and Mission</h2>
+        <p>
+          Working towards a well-served, inclusive and environmentally
+          responsible community.
+        </p>
+      </div>
+
+      <div class="vision-grid">
+        <article class="vision-card">
+          <h3>Our Vision</h3>
+          <p>
+            To support the development of a model local community that
+            values equality, public participation, social justice and
+            environmental sustainability. The vision emphasises improved
+            quality of life, responsible use of local resources and
+            opportunities for all sections of society.
+          </p>
+        </article>
+
+        <article class="vision-card">
+          <h3>Our Mission</h3>
+          <p>
+            To strengthen local development through responsive public
+            services, community participation and effective planning.
+            Priorities include essential infrastructure, sanitation,
+            healthcare, education, livelihood opportunities, welfare
+            initiatives and environmentally responsible development.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-white" id="boundary">
+      <div class="section-heading">
+        <span>Spatial Information</span>
+        <h2>Panchayat Boundary Map</h2>
+        <p>
+          Explore the geographical extent of Nilamel Grama Panchayat
+          through the boundary map provided below.
+        </p>
+      </div>
+
+      <div class="map-card">
+        <img
+          src="boundary.png"
+          alt="Geographical boundary map of Nilamel Grama Panchayat"
+          class="boundary-image"
+          loading="lazy"
+        >
+        <div class="map-caption">
+          <h3>Nilamel Grama Panchayat Boundary</h3>
+          <p>
+            The boundary map provides a spatial reference for understanding
+            the panchayat area and supporting geographical study and
+            local-level planning.
+          </p>
+          <a
+            href="https://sulfiyanazeer7-hue.github.io/Panchayath-map1/"
+            class="button"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Open Interactive Resource Map ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resource-section" id="resources">
+      <div class="section-heading">
+        <span>Explore Geographical Resources</span>
+        <h2>Nilamel Resource Map</h2>
+        <p>
+          Use the interactive map to explore mapped geographical
+          information and local resources.
+        </p>
+      </div>
+
+      <div class="resource-panel">
+        <h3>Explore the Area Through WebGIS</h3>
+        <p>
+          The resource map offers a digital way to view spatial information
+          associated with Nilamel. It can support geographical understanding,
+          resource identification and local-level planning.
+        </p>
+        <a
+          href="https://sulfiyanazeer7-hue.github.io/Panchayath-map1/"
+          class="button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Open Resource Map ↗</a>
+      </div>
+    </section>
+
+    <section class="section section-white" id="contact">
+      <div class="section-heading">
+        <span>Get in Touch</span>
+        <h2>Contact Information</h2>
+        <p>
+          For enquiries regarding this website and its geographical
+          information, use the contact details below.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon" aria-hidden="true">♙</div>
+          <h3>Contact Person</h3>
+          <p>Sulfiya N</p>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon" aria-hidden="true">☎</div>
+          <h3>Phone Number</h3>
+          <a href="tel:35798764365">35798764365</a>
+        </div>
+
+        <div class="contact-card">
+          <div class="contact-icon" aria-hidden="true">✉</div>
+          <h3>Email Address</h3>
+          <a href="mailto:sulfiyan77@gmail.com">
+            sulfiyan77@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <p class="contact-note">
+        Note: The contact details above are the details supplied for this
+        website. Please verify them before publishing the site as an
+        official panchayat contact page.
+      </p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p><strong>Nilamel Grama Panchayat</strong> | Kollam, Kerala</p>
+    <p>
+      A geographical information and local development website.
+    </p>
+    <p>© 2026 Nilamel Panchayat Website. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
